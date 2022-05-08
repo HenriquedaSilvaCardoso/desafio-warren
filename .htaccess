@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !desafio-warren/
+
+#aqui criamos uma condiçao para que os arquivos sejam ignorados nas regras abaixo
+RewriteCond %{REQUEST_FILENAME} !-f
+#aqui criamos uma condição para que diretórios sejam ignorados nas regras abaixo
+RewriteCond %{REQUEST_FILENAME} !-d
+#aqui definimos onde começa a base das regras
+#vamos supor que fosse um subdiretório, como por exemplo: /vs1/
+#aqui ignoramos o uso de barra no final
+RewriteRule ^(.+)\/?$ $1 [R,L]
+
+# aqui definimos que a expressão da direita pode ser redefinida por /*nome do arquivo (pode conter letra maiúsculas, minúsculas e números) 
+RewriteRule ^([-_a-z-_A-Z0-9]+)/?$ index.php?page=$1 [L]
+
+# essa regra permite que a expressão da direita seja reescrita como /*nome do arquivo*/result especificamente para o exercício três
+RewriteRule ^([-_a-z-_A-Z0-9]+)/result/?$ index.php?page=$1&result=true [L]

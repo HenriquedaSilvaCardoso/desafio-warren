@@ -1,0 +1,1 @@
+<!-- Esse arquivo não faz uso de nada do controller, mas é necessário fazê-lo para que a página execute devido a requisição do index -->

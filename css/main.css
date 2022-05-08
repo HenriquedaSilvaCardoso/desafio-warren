@@ -1,0 +1,27 @@
+.primarypalette {
+    background-color: rgb(224 43 87) !important;
+    color: white !important;
+    text-decoration: unset !important;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: rgb(219, 219, 219);
+}
+
+.dropdown-menu {
+    background-color: #e02b57;
+}
+
+.alert {
+    position:absolute;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 2rem;
+    z-index: 999999;
+}
